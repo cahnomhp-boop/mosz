@@ -1,0 +1,105 @@
+export default function AccountStoreLandingPage() {
+  const buyNowLink = waLink + '?text=Halo%20saya%20ingin%20beli%20akun';
+  const waLink = "https://wa.me/6281234567890";
+  const tiktokLink = "https://www.tiktok.com/@namatoko";
+  const driveLink = "https://drive.google.com/drive/folders/your-testimoni-folder";
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white">
+      {/* Hero */}
+      <section className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <p className="text-sm tracking-[0.3em] text-slate-300 mb-4 uppercase">Trusted Account Store</p>
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+              TOKO <span className="text-cyan-400">JUAL BELI AKUN</span>
+            </h1>
+            <p className="mt-6 text-lg text-slate-300 leading-8">
+              Platform modern untuk jual beli akun game, sosial media, dan digital services.
+              Aman, cepat, terpercaya, dan siap melayani 24 jam.
+            </p>
+
+            <div className="flex items-center gap-3 mb-4">
+              <span className="px-4 py-1 rounded-full bg-yellow-400 text-black text-sm font-bold animate-pulse shadow-lg">🔥 Trusted Seller</span>
+              <span className="px-4 py-1 rounded-full bg-cyan-400/20 border border-cyan-400 text-cyan-300 text-sm font-semibold animate-bounce">⚡ Fast Response</span>
+            </div>
+            <div className="flex flex-wrap gap-4 mt-8">
+              <a
+                href={waLink}
+                target="_blank"
+                className="px-6 py-3 rounded-2xl bg-green-500 hover:scale-105 transition shadow-xl"
+              >
+                Hubungi WhatsApp
+              </a>
+              <a
+                href={tiktokLink}
+                target="_blank"
+                className="px-6 py-3 rounded-2xl border border-cyan-400 hover:bg-cyan-400 hover:text-black transition"
+              >
+                TikTok Store
+              </a>
+              <a
+                href={buyNowLink}
+                target="_blank"
+                className="px-8 py-3 rounded-2xl bg-gradient-to-r from-yellow-400 to-orange-400 text-black font-bold hover:scale-110 transition duration-300 shadow-2xl animate-pulse"
+              >
+                🛒 Beli Otomatis
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/10">
+            <div className="w-24 h-24 rounded-full bg-cyan-400 mx-auto mb-6 flex items-center justify-center text-3xl font-bold text-black">
+              TS
+            </div>
+            <h2 className="text-2xl font-semibold text-center">Nama Toko Kamu</h2>
+            <p className="text-center text-slate-300 mt-3 leading-7">
+              Spesialis jual beli akun premium dengan harga terbaik dan proses cepat.
+            </p>
+            <div className="mt-6 space-y-3 text-sm text-slate-300">
+              <p>✔ Fast response</p>
+              <p>✔ Trusted seller</p>
+              <p>✔ Garansi sesuai kesepakatan</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
+        {[
+          "Akun game premium",
+          "Akun sosial media siap pakai",
+          "Layanan top up & jasa digital",
+        ].map((item, index) => (
+          <div key={index} className="p-6 rounded-3xl bg-white/5 border border-cyan-400/20 shadow-lg hover:scale-110 hover:shadow-cyan-400/40 hover:shadow-2xl hover:border-cyan-400 transition duration-300 animate-pulse">
+            <h3 className="text-xl font-semibold mb-3">{item}</h3>
+            <p className="text-slate-300">Harga bersaing, aman, dan proses cepat sesuai kebutuhan pembeli.</p>
+          </div>
+        ))}
+      </section>
+
+      {/* Testimonial */}
+      <section className="max-w-7xl mx-auto px-6 py-16">
+        <div className="rounded-3xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-10 border border-cyan-400/30">
+          <h2 className="text-3xl font-bold mb-4">Testimoni Pembeli</h2>
+          <p className="text-slate-300 mb-6">
+            Lihat bukti transaksi dan ulasan pelanggan kami melalui Google Drive.
+          </p>
+          <a
+            href={driveLink}
+            target="_blank"
+            className="inline-block px-6 py-3 rounded-2xl bg-cyan-400 text-black font-semibold hover:scale-105 transition"
+          >
+            Lihat Testimoni
+          </a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center py-8 text-slate-400 border-t border-white/10">
+        © 2026 Nama Toko Kamu • Jual Beli Akun Trusted
+      </footer>
+    </div>
+  );
+}
